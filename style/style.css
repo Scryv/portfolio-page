@@ -334,7 +334,7 @@ footer {
 }
 .skills-pills {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0.75rem;
 }
 #friendlink{
