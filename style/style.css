@@ -344,3 +344,21 @@ footer {
 #friendlink:hover{
     color: var(--hover-color);
 }
+.organisation {
+    display: flex;
+    align-items: center; 
+    gap: 9px;        
+    margin-bottom: 8px;  
+}
+.organisation span {
+    font-weight: bold;
+    color: var(--text-color);
+}
+.organisation-link {
+    text-decoration: none; 
+    color: inherit;       
+}
+.organisation-link:hover .organisation span {
+    color: var(--hover-color); 
+    cursor: pointer;
+}
