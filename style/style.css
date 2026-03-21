@@ -400,14 +400,15 @@ footer {
 .accordion-body li {
     list-style: none !important;
 }
-li {
+.container li {
     position: relative;
     margin: 12px 0;
     padding-left: 20px;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-li::before {
+
+.container li::before {
     content: "○";
     position: absolute;
     left: 0;
@@ -415,12 +416,14 @@ li::before {
     transition: color 0.2s ease;
 }
 
-li:hover {
+
+.container li:hover {
     transform: translateX(6px);
     color: white;
 }
 
-li:hover::before {
+
+.container li:hover::before {
     content: "●";
     color: white;
 }
