@@ -79,6 +79,9 @@ main {
     padding: 6px;
     color: var(--text-color);
 }
+#Info {
+         color: var(--text-color);
+}
 #be {
     border: 2px solid var(--secondary-color);
     transition: 0.3s ease-in;
@@ -362,3 +365,69 @@ footer {
     color: var(--hover-color); 
     cursor: pointer;
 }
+    .accordion-item {
+      background: transparent;
+      border: 2px solid var(--hover-color);
+      border-radius: 0;
+    }
+
+    .accordion-button {
+      background: #1c1c1c;
+      color: #fff;
+      box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #1c1c1c;
+      color: #fff;
+    }
+
+    .accordion-button::after {
+      filter: invert(1);
+    }
+
+    .accordion-body {
+      background: #;
+      color: #ccc;
+    }
+    .subtle {
+        color: #676c75;
+    }
+.accordion-body ul{
+    list-style: none !important;
+    padding: 0;
+    margin: 0:
+}
+.accordion-body li {
+    list-style: none !important;
+}
+li {
+    position: relative;
+    margin: 12px 0;
+    padding-left: 20px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+li::before {
+    content: "○";
+    position: absolute;
+    left: 0;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(6px);
+    color: white;
+}
+
+li:hover::before {
+    content: "●";
+    color: white;
+}
+.UdlCool{
+        color: var(--text-color);
+    }
+.UdlCool:hover{
+        text-decoration-style: wavy;
+    }
