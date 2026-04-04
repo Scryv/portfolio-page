@@ -442,3 +442,34 @@ footer a:hover {
     transform: translateY(-5px) scale(1.05);
     z-index: 10;
 }
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links {
+    float: none;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    object-fit: cover;
+}
