@@ -23,6 +23,8 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <title>Portfolio | S.D.G</title>
   </head>
   <body>
@@ -90,9 +92,10 @@
 
     </div>
     <div class="col">
-      <img src="img/pfp.jpg" width="600px" class="img-fluid">
+      <div class="bubss">
+      <img src="img/pfp.jpg" width="600px" class=" bubs img-fluid">
     </div>
-
+</div>
   </div>
 </div>
 </section>
@@ -121,15 +124,15 @@
   </div>
   <div class="row">
     <div class="col">
-      <img src="img/pot.jpg" width="490px" class="img-fluid">
+      <img src="img/pot.jpg" width="490px" class="proj img-fluid">
       <p>Photography</p>
     </div>
     <div class="col">
-      <img src="img/GoVault.jpg" width="490px" class="img-fluid">
+      <a href="https://github.com/Scryv/GoVault" target="_blank"><img src="img/GoVault.jpg" width="490px" class="proj img-fluid"></a>
       <p>GoVault</p>
     </div>
     <div class="col">
-      <img src="img/rr.jpg" width="490px" class="img-fluid">
+      <a href="https://github.com/Scryv/Rdrone" target="_blank"><img src="img/Rdrone.jpg" width="490px" class="proj img-fluid"></a>
       <p>Rdrone</p>
     </div>
   </div>
@@ -138,11 +141,76 @@
 <br>
 <br>
 <br>
+<section id="extraInfoIG">
+  <div class="crt-section">
+    <canvas class="crt-noise-canvas" aria-hidden="true"></canvas>
+    <div class="crt-content">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div  class="quote">
+            <h2>"There are no facts, only interpretations."<br>
+
+            </h2>
+            <p class="fn">- Friedrich Nietzsche</p>
+          </div>
+          </div>
+          <div class="col">
+            <div class="info">
+              <div class="lefttt">
+            <table>
+  <tr>
+    <td>OS:</td>
+    <td><strong>Arch Linux</strong></td>
+  </tr>
+  <tr>
+    <td>WM:</td>
+    <td><strong>bspwm</strong></td>
+  </tr>
+  <tr>
+    <td>IDE:</td>
+    <td><strong>Helix</strong></td>
+  </tr>
+  <tr>
+    <td>Shell:</td>
+    <td><strong>Bash</strong></td>
+  </tr>
+</table>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+</section>
+<br>
+<br>
+<br>
 <section class="footer">
   <div class="container text-center">
     <div class="row">
-     <div class="col">
-        <p>Made By Seppe D.G.</p>
+     <div class="col"> 
+        <div class="heyy">
+                <a href="#"><img src="/img/archlinux.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/chrome.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/eu.png" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/grapheneos.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="https://sdgscryv.xyz"><img src="/img/sdgScryv.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/helix.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/home-assistant.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/internetarchive.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/libreboot.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/monero-now.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/right2repair.png" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="https://sfymmik.xyz/" target="_blank"><img src="/img/sfymmik.png" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/void-button-anim.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                <a href="#"><img src="/img/spotify.gif" style="margin-bottom: 8px;" width="88" height="31"></a>
+                                
+            </div>
+        <p class="baba">Made By <span class="speciall">Seppe D.G.</span><br>
+          Licensed under the <a href="https://github.com/Scryv/portfolio-page/blob/main/LICENSE" target="_blank"> Apache 2.0 License</span></a>
+        </p>
      </div>
   </div>
   </div>
@@ -151,7 +219,121 @@
 </section>
 <br>
 <br>
-
+<!-- This part has been lended by @Sfymmik look at NOTICE file -->
+<script>
+(function () {
+  "use strict";
+  /* ═══════════════════ CONFIG ═══════════════════ */
+  const CFG = {
+    grainSize: 2,
+    opacity: 0.06,
+    tint: [30, 184, 231],      // cyan tint
+    tintStrength: 0.15,
+    fps: 12,
+    mobileFps: 8,
+  };
+  /* ═══════════════════ REDUCED MOTION CHECK ═══════════════════ */
+  const reducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* ═══════════════════ CRT NOISE CLASS ═══════════════════ */
+  class CRTNoise {
+    constructor(canvas) {
+      this.cvs = canvas;
+      this.ctx = canvas.getContext("2d");
+      this.mobile = window.innerWidth < 768 || "ontouchstart" in window;
+      this.scale = this.mobile ? 0.25 : 0.5;
+      this.interval = 1000 / (this.mobile ? CFG.mobileFps : CFG.fps);
+      this.lastFrame = 0;
+      this._resize();
+      this._buildGrainTile();
+      this._bind();
+      this._loop(0);
+    }
+    _resize() {
+      const rect = this.cvs.parentElement.getBoundingClientRect();
+      this.w = rect.width;
+      this.h = rect.height;
+      this.cw = Math.round(this.w * this.scale);
+      this.ch = Math.round(this.h * this.scale);
+      this.cvs.width = this.cw;
+      this.cvs.height = this.ch;
+      this.cvs.style.width = this.w + "px";
+      this.cvs.style.height = this.h + "px";
+    }
+    _buildGrainTile() {
+      const size = 128;
+      this.tile = document.createElement("canvas");
+      this.tile.width = size;
+      this.tile.height = size;
+      this.tileCtx = this.tile.getContext("2d");
+      this.tileSize = size;
+    }
+    _refreshTile() {
+      const ctx = this.tileCtx;
+      const size = this.tileSize;
+      const img = ctx.createImageData(size, size);
+      const d = img.data;
+      const tint = CFG.tint;
+      const ts = CFG.tintStrength;
+      for (let i = 0; i < d.length; i += 4) {
+        const v = Math.random() * 255;
+        d[i]     = Math.round(v * (1 - ts) + tint[0] * ts);
+        d[i + 1] = Math.round(v * (1 - ts) + tint[1] * ts);
+        d[i + 2] = Math.round(v * (1 - ts) + tint[2] * ts);
+        d[i + 3] = Math.round(Math.random() * 255 * CFG.opacity);
+      }
+      ctx.putImageData(img, 0, 0);
+    }
+    _bind() {
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => this._resize(), 200);
+      });
+    }
+    _loop(timestamp) {
+      requestAnimationFrame((t) => this._loop(t));
+      const delta = timestamp - this.lastFrame;
+      if (delta < this.interval) return;
+      this.lastFrame = timestamp - (delta % this.interval);
+      this._refreshTile();
+      const ctx = this.ctx;
+      const ox = Math.floor(Math.random() * this.tileSize);
+      const oy = Math.floor(Math.random() * this.tileSize);
+      ctx.clearRect(0, 0, this.cw, this.ch);
+      const pattern = ctx.createPattern(this.tile, "repeat");
+      ctx.save();
+      ctx.translate(ox, oy);
+      ctx.fillStyle = pattern;
+      ctx.fillRect(
+        -this.tileSize,
+        -this.tileSize,
+        this.cw + this.tileSize,
+        this.ch + this.tileSize
+      );
+      ctx.restore();
+    }
+  }
+  /* ═══════════════════ INIT ═══════════════════ */
+  function boot() {
+    if (reducedMotion) return;
+    // Initialize noise on ALL .crt-noise-canvas elements found
+    document.querySelectorAll(".crt-noise-canvas").forEach((cvs) => {
+      try {
+        new CRTNoise(cvs);
+      } catch (e) {
+        console.warn("[CRT] Noise init failed:", e);
+      }
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+<!-- END OF BORROWED CODE -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

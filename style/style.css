@@ -58,12 +58,14 @@ backdrop-filter: blur(5.8px);
     color: white;
 }
 .img-fluid {
-    border-radius: 9px;
+    border-radius: 4px;
     transition: transform .2s;
-    border: 1px dashed black;
 }
 .img-fluid:hover {
     transform: scale(1.04);
+}
+.proj{
+       border: 1px dashed black;
 }
 .marquee {
   overflow: hidden;
@@ -116,6 +118,14 @@ backdrop-filter: blur(5.8px);
     transform: translateY(-3px);
     background: rgb(40,40,40);
     color: white;
+    border: 0px;
+}
+
+.bubs{
+    transform: rotate(2deg);
+}
+.bubss{
+    border: 2px solid black;
 }
 .Quirk {
     font-family: "JetBrains Mono", monospace;
@@ -139,3 +149,147 @@ backdrop-filter: blur(5.8px);
     padding-top: 30px;
     color: black;
 }
+.baba{
+    font-family: "Inter", sans-serif;
+}
+.speciall{
+    font-family: "JetBrains Mono", monospace;
+
+}
+.quote{
+    margin-top: 5vw;
+    border-left: 3px solid white ;
+    padding-left: 12px;
+}
+
+.info{
+        margin-top: 5vw;
+       text-align: center;
+  column-gap: 15px;               
+  row-gap: 5px;   
+}
+.lefttt {
+    display: inline-block;
+    text-align: left;
+}
+.quote h2 {
+    font-family: "Inter", sans-serif;
+
+}
+
+.heyy{
+  margin-bottom: 9px;
+  transition: 0.2s ease;
+}
+.heyy a img:hover{
+        transform: translateY(-3px);
+
+}
+
+
+
+/* This part has been lended by @Sfymmik look at NOTICE file */
+
+.crt-section {
+      min-height: 30vh;
+  position: relative;
+  overflow: hidden;
+  background: #0f0f0f;
+  color: #dddddd;
+  /* Enable the flicker animation */
+  animation: crt-flicker 8s infinite;
+}
+.crt-section::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.45) 0px,
+    rgba(0, 0, 0, 0.45) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+}
+.crt-section::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+}
+.crt-section .crt-noise-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  image-rendering: auto;
+}
+.crt-section .crt-content {
+  position: relative;
+  z-index: 5;
+}
+@keyframes crt-flicker {
+  0%   { opacity: 1; }
+  92%  { opacity: 1; }
+  93%  { opacity: 0.96; }
+  94%  { opacity: 1; }
+  96%  { opacity: 0.98; }
+  100% { opacity: 1; }
+}
+.crt-glitch-shift {
+  transform: translateX(var(--glitch-x, 3px)) !important;
+}
+.crt-glitch-shift * {
+  text-shadow:
+    calc(var(--glitch-x, 3px) * -0.7) 0 rgba(255, 0, 50, 0.35),
+    calc(var(--glitch-x, 3px) * 0.5)  0 rgba(0, 255, 200, 0.3) !important;
+}
+.crt-glitch-color {
+  filter: hue-rotate(var(--glitch-hue, 30deg)) saturate(2) !important;
+}
+.crt-glitch-flash {
+  filter: brightness(1.3) contrast(1.15) !important;
+}
+@media (max-width: 768px) {
+  .crt-section::before {
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0px,
+      rgba(0, 0, 0, 0.3) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+  .crt-section::after {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 65%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+  .crt-section {
+    animation: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crt-section {
+    animation: none !important;
+  }
+  .crt-section .crt-noise-canvas {
+    display: none !important;
+  }
+}
+/* END OF BORROWED CODE */
